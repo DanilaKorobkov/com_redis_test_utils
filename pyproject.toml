@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "com_redis_test_utils"
 version = "0.1.0"
-description = "Pytest fixtures for setting up redis docker  container and make connection"
+description = "Pytest fixtures providing a connection to the radis that was previously set up inside a docker container"
 authors = [
     "Danila Korobkov <korobkov.danila.yurevich@gmail.com>",
 ]
