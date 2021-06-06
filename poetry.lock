@@ -14,7 +14,7 @@ name = "aiohttp"
 version = "3.7.4.post0"
 description = "Async http client/server framework (asyncio)"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -33,7 +33,7 @@ name = "aioredis"
 version = "1.3.1"
 description = "asyncio (PEP 3156) Redis support"
 category = "main"
-optional = true
+optional = false
 python-versions = "*"
 
 [package.dependencies]
@@ -57,7 +57,7 @@ name = "async-timeout"
 version = "3.0.1"
 description = "Timeout context manager for asyncio programs"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.5.3"
 
 [[package]]
@@ -114,7 +114,7 @@ name = "chardet"
 version = "4.0.0"
 description = "Universal encoding detector for Python 2 and 3"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -141,7 +141,7 @@ name = "docker"
 version = "5.0.0"
 description = "A Python library for the Docker Engine API."
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -193,7 +193,7 @@ name = "hiredis"
 version = "2.0.0"
 description = "Python wrapper for hiredis"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [[package]]
@@ -201,7 +201,7 @@ name = "idna"
 version = "3.2"
 description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.5"
 
 [[package]]
@@ -246,7 +246,7 @@ name = "multidict"
 version = "5.1.0"
 description = "multidict implementation"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [[package]]
@@ -405,7 +405,7 @@ name = "pywin32"
 version = "227"
 description = "Python for Window Extensions"
 category = "main"
-optional = true
+optional = false
 python-versions = "*"
 
 [[package]]
@@ -421,7 +421,7 @@ name = "requests"
 version = "2.15.1"
 description = "Python HTTP for Humans."
 category = "main"
-optional = true
+optional = false
 python-versions = "*"
 
 [package.extras]
@@ -500,7 +500,7 @@ name = "websocket-client"
 version = "1.0.1"
 description = "WebSocket client for Python with low level API options"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [[package]]
@@ -516,20 +516,17 @@ name = "yarl"
 version = "1.6.3"
 description = "Yet another URL library"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
 idna = ">=2.0"
 multidict = ">=4.0"
 
-[extras]
-pytest-plugin = ["aiohttp", "aioredis", "docker"]
-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "1f90327be0d3be665e9bb1bcb4c639242db4942a86df3a89c737b1ddcf9439b0"
+content-hash = "74bfa70e005b73b36e13e08ac5964030e3352fc5a239ef0c9ebb6a5d6171c10c"
 
 [metadata.files]
 add-trailing-comma = [

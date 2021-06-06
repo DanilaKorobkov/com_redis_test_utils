@@ -15,12 +15,9 @@ documentation = "https://github.com/DanilaKorobkov/com_redis_test_utils/browse/R
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aiohttp = { version = "^3.7", optional = true }
-aioredis = { version = "^1.3", optional = true }
-docker = { version = "^5.0", optional = true }
-
-[tool.poetry.extras]
-pytest-plugin = ["aiohttp", "aioredis", "docker"]
+aiohttp = "^3.7"
+aioredis = "^1.3"
+docker = "^5.0"
 
 [tool.poetry.dev-dependencies]
 add-trailing-comma = "^2.1"

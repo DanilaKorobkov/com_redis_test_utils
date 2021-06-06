@@ -21,7 +21,7 @@ clean:
 	rm -rf $(VENV)
 
 $(VENV):
-	poetry install --no-root --extras pytest-plugin
+	poetry install --no-root
 
 $(REPORTS):
 	mkdir $(REPORTS)
