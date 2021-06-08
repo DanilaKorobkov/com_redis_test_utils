@@ -1,10 +1,12 @@
 import aioredis
 
 
-async def test__redis_client__get_set(redis_client: aioredis.Redis) -> None:
+async def test__com_redis_client__get_set(
+    com_redis_client: aioredis.Redis,
+) -> None:
     expected = "value"
 
-    await redis_client.set("key", expected)
-    real = await redis_client.get("key", encoding="utf-8")
+    await com_redis_client.set("key", expected)
+    real = await com_redis_client.get("key", encoding="utf-8")
 
     assert real == expected

@@ -13,18 +13,18 @@ pytest_plugins: Final = ("aiohttp.pytest_plugin",)
 
 
 @pytest.fixture(scope="session")
-def redis_url() -> Iterator[str]:
+def com_redis_url() -> Iterator[str]:
     host, port = "127.0.0.1", unused_port()
     with up_redis_container(host, port):
         yield f"redis://{host}:{port}"
 
 
 @pytest.fixture
-async def redis_client(
-    redis_url: str,
+async def com_redis_client(
+    com_redis_url: str,
     loop: asyncio.AbstractEventLoop,
 ) -> AsyncIterator[aioredis.Redis]:
     assert loop.is_running()
 
-    async with redis_client_factory(redis_url) as redis:
+    async with redis_client_factory(com_redis_url) as redis:
         yield redis
