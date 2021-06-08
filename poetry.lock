@@ -525,8 +525,8 @@ multidict = ">=4.0"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.8"
-content-hash = "74bfa70e005b73b36e13e08ac5964030e3352fc5a239ef0c9ebb6a5d6171c10c"
+python-versions = "^3.9"
+content-hash = "6d39cf13c2850c1de6c7a1eaa7d026d4ac29cbc2f1f823a18453a0e2b1518a57"
 
 [metadata.files]
 add-trailing-comma = [
