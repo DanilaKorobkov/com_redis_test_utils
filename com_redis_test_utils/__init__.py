@@ -1,8 +1,12 @@
-from .utils import RedisConfig, up_redis_client, up_redis_container
+from .utils import (
+    RedisConfig,
+    redis_client_upped,
+    redis_docker_container_upped,
+)
 
 __all__ = (
     "RedisConfig",
 
-    "up_redis_client",
-    "up_redis_container",
+    "redis_client_upped",
+    "redis_docker_container_upped",
 )

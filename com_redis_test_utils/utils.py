@@ -13,6 +13,7 @@ class RedisConfig:
     host: str
     port: int
     min_size: int
+    max_size: int
 
     def get_url(self) -> URL:
         return URL.build(
@@ -23,7 +24,7 @@ class RedisConfig:
 
 
 @contextmanager
-def up_redis_container(config: RedisConfig) -> Iterator[None]:
+def redis_docker_container_upped(config: RedisConfig) -> Iterator[None]:
     docker_client = docker.from_env()
 
     container = docker_client.containers.run(
@@ -41,7 +42,7 @@ def up_redis_container(config: RedisConfig) -> Iterator[None]:
 
 
 @asynccontextmanager
-async def up_redis_client(config: RedisConfig) -> aioredis.Redis:
+async def redis_client_upped(config: RedisConfig) -> aioredis.Redis:
     redis = await _wait_redis_setup(config)
     try:
         yield redis
@@ -57,6 +58,7 @@ async def _wait_redis_setup(config: RedisConfig) -> aioredis.Redis:
             redis = await aioredis.create_redis_pool(
                 address=str(config.get_url()),
                 minsize=config.min_size,
+                maxsize=config.max_size,
             )
             await redis.ping()
         except (ConnectionError, aioredis.ConnectionClosedError):
