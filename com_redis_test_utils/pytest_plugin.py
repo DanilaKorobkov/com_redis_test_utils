@@ -1,4 +1,5 @@
-# pylint: disable=redefined-outer-name, unused-argument
+# pylint: disable=unused-argument
+# pylint: disable=redefined-outer-name
 
 import asyncio
 from typing import AsyncIterator, Final, Iterator
