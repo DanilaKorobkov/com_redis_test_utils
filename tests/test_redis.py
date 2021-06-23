@@ -7,4 +7,4 @@ async def test__com_redis_client__get_set(
     expected = "value"
     await com_redis_client.set("key", expected)
 
-    assert await com_redis_client.get("key", encoding="utf-8") == expected
+    assert await com_redis_client.get("key") == expected

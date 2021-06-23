@@ -59,6 +59,7 @@ async def _wait_redis_setup(config: RedisConfig) -> aioredis.Redis:
                 address=str(config.get_url()),
                 minsize=config.min_size,
                 maxsize=config.max_size,
+                encoding="utf-8",
             )
             await redis.ping()
         except (ConnectionError, aioredis.ConnectionClosedError):
